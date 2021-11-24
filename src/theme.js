@@ -20,4 +20,9 @@ export const theme = {
     sh2: "2.35",
     navText: "2.7 ",
   },
+
+  windowSizes: {
+    tablet: "1000px",
+    phone: "550px",
+  },
 };

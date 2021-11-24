@@ -45,7 +45,12 @@ export const ButtonStyled = styled.a`
   }
 
   &:hover:before {
-    transform: scale(1.5);
+    transform: scale(1.4);
+  }
+
+  @media (max-width: ${({ theme }) => theme.windowSizes.tablet}) {
+    position: relative;
+    font-size: 25px;
   }
 `;
 

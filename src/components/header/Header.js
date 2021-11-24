@@ -9,7 +9,7 @@ import {
 import NavLink from "./NavLink";
 import HeaderIcon from "../../assets/shared/logo.svg";
 
-export default function Header({ currentPage }) {
+export default function Header({ currentPage, setCurrentPage }) {
   return (
     <HeaderStyled>
       <LeftHeaderStyled>
@@ -17,10 +17,10 @@ export default function Header({ currentPage }) {
         <LeftHeaderLineStyled />
       </LeftHeaderStyled>
       <NavStyled>
-        <NavLink number={"01"} text="home" currentPage={currentPage}/>
-        <NavLink number={"01"} text="destination" currentPage={currentPage}/>
-        <NavLink number={"02"} text="crew" currentPage={currentPage}/>
-        <NavLink number={"03"} text="technology" currentPage={currentPage}/>
+        <NavLink number={"00"} text="home" path="/" />
+        <NavLink number={"01"} text="destination" path="/destination" />
+        <NavLink number={"02"} text="crew" path="/crew" />
+        <NavLink number={"03"} text="technology" path="/technology" />
       </NavStyled>
     </HeaderStyled>
   );

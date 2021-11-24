@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLinkStyled, NavLinkNumberStyled } from "./styled/HeaderStyled";
 
-export default function NavLink({ number, text, currentPage }) {
+export default function NavLink({ number, text, path }) {
   return (
-    <NavLinkStyled text={text} currentPage={currentPage}>
+    <NavLinkStyled to={path} path={path}>
       <NavLinkNumberStyled>{number}</NavLinkNumberStyled> {text}
     </NavLinkStyled>
   );
