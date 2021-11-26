@@ -37,15 +37,15 @@ export const NavLinkStyled = styled(Link)`
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 2.35px;
-  border-bottom: ${({ path }) =>
-    path === window.location.pathname
+  border-bottom: ${({ path, currentPath }) =>
+    path === currentPath
       ? "solid 3px white"
       : "solid 3px transparent"};
   border-top: solid 3px transparent;
 
   &:hover {
-    border-bottom: ${({ path }) =>
-      path === window.location.pathname
+    border-bottom: ${({ path, currentPath }) =>
+      path === currentPath
         ? "solid 3px white"
         : "solid 3px rgba(255, 255, 255, 0.6)"};
   }
