@@ -4,7 +4,7 @@ export const MainStyled = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 80%;
-  margin: 15rem auto 0 auto;
+  margin: 12rem auto 0 auto;
 
   @media (max-width: ${({ theme }) => theme.windowSizes.tablet}) {
     display: flex;

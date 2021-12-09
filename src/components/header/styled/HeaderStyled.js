@@ -6,9 +6,10 @@ console.log(window.location.pathname);
 export const HeaderStyled = styled.header`
   display: grid;
   grid-template-columns: 3fr 5fr;
-  position: fixed;
+  position: absolute;
   width: 100vw;
   margin-top: 2rem;
+  /* padding: 0 2rem; */
 
   @media (max-width: ${({ theme }) => theme.windowSizes.tablet}) {
     grid-template-columns: 1fr 2fr;
@@ -38,9 +39,7 @@ export const NavLinkStyled = styled(Link)`
   font-size: 16px;
   letter-spacing: 2.35px;
   border-bottom: ${({ path, currentPath }) =>
-    path === currentPath
-      ? "solid 3px white"
-      : "solid 3px transparent"};
+    path === currentPath ? "solid 3px white" : "solid 3px transparent"};
   border-top: solid 3px transparent;
 
   &:hover {
@@ -66,7 +65,7 @@ export const LogoStyled = styled.img`
   margin-bottom: 1.5rem;
 
   @media (max-width: ${({ theme }) => theme.windowSizes.tablet}) {
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }

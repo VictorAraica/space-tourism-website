@@ -1,50 +1,52 @@
 import styled from "styled-components";
 
 export const DescriptionContainerStyled = styled.div`
-  position: relative;
-  max-width: min-content;
-  cursor: default;
-`;
-
-export const HeadingStyled = styled.h1`
-  font-family: "Bellefair";
-  text-transform: uppercase;
-  font-size: 150px;
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  grid-area: description;
 
   @media (max-width: ${({ theme }) => theme.windowSizes.tablet}) {
-    text-align: center;
-    font-size: 140px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.windowSizes.phone}) {
-    font-size: 115px;
+    align-items: center;
+    padding: 0 1rem;
   }
 `;
-export const SubHeadingStyled = styled.h3`
+
+export const SubtitleStyled = styled.h3`
   font-family: "Barlow Condensed";
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 20px;
   letter-spacing: 4.75px;
+  color: ${({ theme }) => theme.colors.lavender};
   margin-bottom: 1rem;
 
-  color: ${({ theme }) => theme.colors.lavender};
+  @media (max-width: ${({ theme }) => theme.windowSizes.phone}) {
+    font-size: 18px;
+  }
+`;
+
+export const TitleStyled = styled.h1`
+  font-family: Bellefair;
+  font-size: 56px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 
   @media (max-width: ${({ theme }) => theme.windowSizes.tablet}) {
     text-align: center;
   }
 
   @media (max-width: ${({ theme }) => theme.windowSizes.phone}) {
-    font-size: 21px;
+    font-size: 45px;
   }
 `;
 
 export const ParagraphStyled = styled.p`
-  font-family: "Barlow";
-  font-size: 18px;
+  font-family: "Barlow Condensed";
+  font-size: 20px;
   text-align: left;
   color: ${({ theme }) => theme.colors.lavender};
+  max-width: 450px;
   line-height: 33px;
 
   @media (max-width: ${({ theme }) => theme.windowSizes.tablet}) {

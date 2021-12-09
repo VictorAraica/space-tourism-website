@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const PageStyled = styled.div`
+  display: ${({ stretch }) => (stretch ? "flex" : "")};
   min-height: 100vh;
   background-attachment: fixed;
   background-image: url(${({ desktopBG }) => desktopBG});

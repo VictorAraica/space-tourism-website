@@ -12,9 +12,9 @@ import imageMars from "../../assets/destination/image-mars.png";
 import imageMoon from "../../assets/destination/image-moon.png";
 import imageTitan from "../../assets/destination/image-titan.png";
 
-import SectionTitle from "../../components/destination.js/SectionTitle";
-import Image from "../../components/destination.js/Image";
-import Description from "../../components/destination.js/Description";
+import SectionTitle from "../../components/SectionTitle";
+import Image from "../../components/destination/Image";
+import Description from "../../components/destination/Description";
 
 const destinations = {
   moon: {

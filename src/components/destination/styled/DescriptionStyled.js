@@ -31,7 +31,7 @@ export const ParagraphStyled = styled.p`
   }
 
   @media (max-width: ${({ theme }) => theme.windowSizes.phone}) {
-    font-size: 14px;
+    font-size: 17px;
     line-height: 25px;
   }
 `;

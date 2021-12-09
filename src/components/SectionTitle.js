@@ -1,8 +1,7 @@
-import React from "react";
 import {
   SectionTitleStyled,
   SectionTitleNumberStyled,
-} from "./styled/SectionTitleStyled";
+} from "./SectionTitleStyled";
 
 export default function SectionTitle({ number, text }) {
   return (
