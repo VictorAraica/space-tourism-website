@@ -5,14 +5,14 @@ export default function NavLink({
   number,
   text,
   path,
-  currentPath,
+  currentpath,
   setCurrentPath,
 }) {
   return (
     <NavLinkStyled
       to={path}
       path={path}
-      currentPath={currentPath}
+      currentpath={currentpath}
       onClick={() => setCurrentPath(path)}
     >
       <NavLinkNumberStyled>{number}</NavLinkNumberStyled> {text}

@@ -5,48 +5,71 @@ import {
   LogoStyled,
   LeftHeaderStyled,
   LeftHeaderLineStyled,
+  BurgerButtonStyled,
+  CloseButtonStyled,
 } from "./styled/HeaderStyled";
 import NavLink from "./NavLink";
 import HeaderIcon from "../../assets/shared/logo.svg";
+import { Link } from "react-router-dom";
 
-export default function Header({ currentPage, setCurrentPage }) {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+export default function Header() {
+  const [currentpath, setCurrentPath] = useState(window.location.pathname);
+  const [open, setOpen] = useState(false);
+
   return (
     <HeaderStyled>
       <LeftHeaderStyled>
-        <LogoStyled src={HeaderIcon} alt="header icon" />
+        <Link to="/" onClick={() => setCurrentPath("/")}>
+          <LogoStyled src={HeaderIcon} alt="header icon" />
+        </Link>
         <LeftHeaderLineStyled />
       </LeftHeaderStyled>
-      <NavStyled>
+      <NavStyled open={open}>
         <NavLink
           number={"00"}
           text="home"
           path="/"
-          currentPath={currentPath}
+          currentpath={currentpath}
           setCurrentPath={setCurrentPath}
         />
         <NavLink
           number={"01"}
           text="destination"
           path="/destination"
-          currentPath={currentPath}
+          currentpath={currentpath}
           setCurrentPath={setCurrentPath}
         />
         <NavLink
           number={"02"}
           text="crew"
           path="/crew"
-          currentPath={currentPath}
+          currentpath={currentpath}
           setCurrentPath={setCurrentPath}
         />
         <NavLink
           number={"03"}
           text="technology"
           path="/technology"
-          currentPath={currentPath}
+          currentpath={currentpath}
           setCurrentPath={setCurrentPath}
         />
+        <CloseButtonStyled
+          color="#D0D6F9"
+          style={{ fontSize: "2.5rem" }}
+          onClick={() => {
+            console.log(open);
+            setOpen(!open);
+          }}
+        />
       </NavStyled>
+      <BurgerButtonStyled
+        style={{ fontSize: "2rem" }}
+        color="#D0D6F9"
+        onClick={() => {
+          console.log(open);
+          setOpen(!open);
+        }}
+      />
     </HeaderStyled>
   );
 }

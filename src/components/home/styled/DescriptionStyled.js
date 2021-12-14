@@ -18,7 +18,7 @@ export const HeadingStyled = styled.h1`
   }
 
   @media (max-width: ${({ theme }) => theme.windowSizes.phone}) {
-    font-size: 115px;
+    font-size: 105px;
   }
 `;
 export const SubHeadingStyled = styled.h3`

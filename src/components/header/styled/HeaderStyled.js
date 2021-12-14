@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdClose } from "react-icons/md";
 
 console.log(window.location.pathname);
 
@@ -22,8 +24,51 @@ export const NavStyled = styled.nav`
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  background-color: rgba(250, 250, 250, 0.07);
+  background-color: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(15px);
+
+  @media (max-width: ${({ theme }) => theme.windowSizes.phone}) {
+    position: fixed;
+    width: 70%;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+    right: 0;
+    padding-left: 10%;
+    padding-top: 8rem;
+    transition: transform 1s;
+    transform: ${({ open }) => (open ? "translateX(0%)" : "translateX(100%)")};
+  }
+`;
+
+export const CloseButtonStyled = styled(MdClose)`
+  display: none;
+  color: "#D0D6F9";
+  font-size: "2rem";
+  cursor: pointer;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+
+  @media (max-width: ${({ theme }) => theme.windowSizes.phone}) {
+    display: block;
+  }
+`;
+
+export const BurgerButtonStyled = styled(GiHamburgerMenu)`
+  display: none;
+  color: "#D0D6F9";
+  font-size: "2rem";
+  align-self: center;
+  justify-self: end;
+  margin-right: 2.7rem;
+  cursor: pointer;
+
+  @media (max-width: ${({ theme }) => theme.windowSizes.phone}) {
+    display: block;
+  }
 `;
 
 export const NavLinkStyled = styled(Link)`
@@ -38,15 +83,23 @@ export const NavLinkStyled = styled(Link)`
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 2.35px;
-  border-bottom: ${({ path, currentPath }) =>
-    path === currentPath ? "solid 3px white" : "solid 3px transparent"};
+  border-bottom: ${({ path, currentpath }) =>
+    path === currentpath ? "solid 3px white" : "solid 3px transparent"};
   border-top: solid 3px transparent;
 
+  @media (max-width: ${({ theme }) => theme.windowSizes.phone}) {
+    height: auto;
+    border: none;
+    font-size: 22px;
+  }
+
   &:hover {
-    border-bottom: ${({ path, currentPath }) =>
-      path === currentPath
-        ? "solid 3px white"
-        : "solid 3px rgba(255, 255, 255, 0.6)"};
+    @media (min-width: ${({ theme }) => theme.windowSizes.phone}) {
+      border-bottom: ${({ path, currentpath }) =>
+        path === currentpath
+          ? "solid 3px white"
+          : "solid 3px rgba(255, 255, 255, 0.6)"};
+    }
   }
 `;
 
@@ -56,6 +109,10 @@ export const NavLinkNumberStyled = styled.span`
 
   @media (max-width: ${({ theme }) => theme.windowSizes.tablet}) {
     display: none;
+  }
+
+  @media (max-width: ${({ theme }) => theme.windowSizes.phone}) {
+    display: block;
   }
 `;
 
