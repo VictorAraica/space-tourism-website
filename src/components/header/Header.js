@@ -57,7 +57,6 @@ export default function Header() {
           color="#D0D6F9"
           style={{ fontSize: "2.5rem" }}
           onClick={() => {
-            console.log(open);
             setOpen(!open);
           }}
         />
@@ -66,7 +65,6 @@ export default function Header() {
         style={{ fontSize: "2rem" }}
         color="#D0D6F9"
         onClick={() => {
-          console.log(open);
           setOpen(!open);
         }}
       />

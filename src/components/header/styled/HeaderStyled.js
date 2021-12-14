@@ -3,15 +3,12 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 
-console.log(window.location.pathname);
-
 export const HeaderStyled = styled.header`
   display: grid;
   grid-template-columns: 3fr 5fr;
   position: absolute;
   width: 100vw;
   margin-top: 2rem;
-  /* padding: 0 2rem; */
 
   @media (max-width: ${({ theme }) => theme.windowSizes.tablet}) {
     grid-template-columns: 1fr 2fr;
@@ -63,7 +60,7 @@ export const BurgerButtonStyled = styled(GiHamburgerMenu)`
   font-size: "2rem";
   align-self: center;
   justify-self: end;
-  margin-right: 2.7rem;
+  margin-right: 2rem;
   cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.windowSizes.phone}) {

@@ -27,4 +27,9 @@ export const DotStyled = styled.a`
     current === self ? "rgb(255, 255, 255)" : "rgba(255, 255, 255, 0.5)"};
   border-radius: 100%;
   cursor: pointer;
+
+  &:hover {
+    background-color: ${({ current, self }) =>
+      current === self ? "rgb(255, 255, 255)" : "rgba(255, 255, 255, 0.7)"};
+  }
 `;
