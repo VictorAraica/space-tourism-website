@@ -133,7 +133,7 @@ export const LeftHeaderStyled = styled.div`
 `;
 
 export const LeftHeaderLineStyled = styled.div`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: rgba(255, 255, 255, 0.5);
   opacity: 0.8;
 
   z-index: 10;
